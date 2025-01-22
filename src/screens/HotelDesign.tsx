@@ -27,7 +27,7 @@ const HotelDesign = () => {
     showSmallLoader();
     api
       .post("book-room", { number: rooms })
-      .then((res) => {
+      .then((res: any) => {
         success(res.msg);
       })
       .catch((err) => {
@@ -62,7 +62,7 @@ const HotelDesign = () => {
     showSmallLoader();
     api
       .patch("reset-rooms")
-      .then((res) => {
+      .then((res: any) => {
         success(res.msg);
       })
       .catch((err) => {
@@ -78,7 +78,7 @@ const HotelDesign = () => {
     showSmallLoader();
     api
       .patch("random-rooms")
-      .then((res) => {
+      .then((res: any) => {
         success(res.msg);
       })
       .catch((err) => {
