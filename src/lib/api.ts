@@ -2,7 +2,7 @@ import axios, { type AxiosRequestConfig } from "axios";
 import type { Room } from "../components/RoomCard";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000", // Vite proxy will forward /api
+  baseURL: "https://hotelmanagementbackend-6xfw.onrender.com/", // Vite proxy will forward /api
   timeout: 8000,
 }); // same-origin; Vite proxy will forward /api
 
