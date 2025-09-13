@@ -9,7 +9,12 @@ export default function HotelGrid({ rooms, highlightedIds }: Props) {
   const floors = Array.from({ length: 10 }, (_, i) => i + 1);
   const roomsByFloor: Record<number, Room[]> = {};
   for (const f of floors) roomsByFloor[f] = [];
-  for (const r of rooms) roomsByFloor[r.floorNumber].push(r);
+  const list = Array.isArray(rooms) ? rooms : [];
+  for (const r of list) {
+    const f = Number(r.floorNumber);
+    if (!Number.isInteger(f) || f < 1 || f > 10) continue;
+    roomsByFloor[f].push(r);
+  }
   for (const f of floors) roomsByFloor[f].sort((a, b) => a.indexOnFloor - b.indexOnFloor);
 
   // Display Floor 10 at top descending to 1
