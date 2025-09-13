@@ -89,7 +89,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header
-        name="Your Name"
+        name="Ankit Prajapati"
         resumeUrl="https://drive.google.com/file/d/1RPl2q2H_7Q29lzslFfl5DuJUlwFLG3iQ/view?usp=drive_link"
         portfolioUrl="https://aprajapati.vercel.app/"
       />
